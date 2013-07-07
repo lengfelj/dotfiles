@@ -18,7 +18,7 @@ alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 
 # location Bindings
 #bind pad1 ${bottomleft}
-#bind pad2 push bottom bar-resize:screenSizeY/2
+bind down:alt;cmd push bottom bar-resize:screenSizeY/2
 #bind pad3 ${bottomright}
 bind left:alt;cmd ${lefthalf}
 #bind pad5 ${full}
