@@ -7,6 +7,11 @@ config windowHintsSpread false
 windowHintsSpreadPadding 100
 
 
+# Monitor Aliases
+alias mon-left 0
+alias mon-right 1
+
+#Abstract Positions
 alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
 alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
 alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
@@ -15,14 +20,37 @@ alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
 alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
 alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 
+#Concrete Positions
+alias 1-full move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-left}
+alias 1-lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY   ${mon-left}
+alias 1-righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY   ${mon-left}
+alias 2-full move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-right}
+alias 2-lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY   ${mon-right}
+alias 2-righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY   ${mon-right}
 
-# location Bindings
-#bind pad1 ${bottomleft}
+
+# Position Bindings
 bind down:alt;cmd push bottom bar-resize:screenSizeY/2
-#bind pad3 ${bottomright}
 bind left:alt;cmd ${lefthalf}
-#bind pad5 ${full}
+bind =:alt,cmd ${full}
 bind right:alt;cmd  ${righthalf}
-#bind pad7 ${topleft}
 bind up:alt;cmd push top bar-resize:screenSizeY/2
-#bind pad9 ${topright}
+
+# Throw to a different screen
+bind .:alt,cmd throw 1 resize
+bind ,:alt,cmd throw 0 resize
+
+# Application Layouts
+layout 2monitor-Work 'Mail':REPEAT ${1-lefthalf}
+layout 2monitor-Work 'OmniFocus':REPEAT ${1-righthalf}
+layout 2monitor-Work 'Remote Desktop Connection':REPEAT ${2-full}
+
+bind 2:alt,cmd layout 2monitor-Work
+
+# App Switching
+bind c:cmd,alt focus 'Google Chrome'
+bind m:cmd,alt focus 'Mail'
+bind o:cmd,alt focus 'OmniFocus'
+bind e:cmd,alt focus 'Evernote'
+
+bind `:alt,cmd relaunch
