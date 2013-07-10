@@ -30,11 +30,18 @@ alias 2-righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;s
 
 
 # Position Bindings
-bind down:alt;cmd push bottom bar-resize:screenSizeY/2
-bind left:alt;cmd ${lefthalf}
+bind j:alt;cmd push bottom bar-resize:screenSizeY/2
+bind h:alt;cmd ${lefthalf}
 bind =:alt,cmd ${full}
-bind right:alt;cmd  ${righthalf}
-bind up:alt;cmd push top bar-resize:screenSizeY/2
+bind l:alt;cmd  ${righthalf}
+bind k:alt;cmd push top bar-resize:screenSizeY/2
+bind y:alt;cmd ${topleft}
+bind p:alt;cmd ${topright}
+bind b:alt;cmd ${bottomleft}
+bind /:alt;cmd ${bottomright}
+
+#Nudge
+bind l:shift;alt nudge +1% +0
 
 # Throw to a different screen
 bind .:alt,cmd throw 1 resize
