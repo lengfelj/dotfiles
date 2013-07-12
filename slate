@@ -3,7 +3,7 @@ bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN
 config defaultToCurrentScreen true
 config windowHintsShowIcons true
 config windowHintsIgnoreHiddenWindows false
-config windowHintsSpread false
+config windowHintsSpread true
 windowHintsSpreadPadding 100
 
 
@@ -40,12 +40,10 @@ bind p:alt;cmd ${topright}
 bind b:alt;cmd ${bottomleft}
 bind /:alt;cmd ${bottomright}
 
-#Nudge
-bind l:shift;alt nudge +1% +0
 
 # Throw to a different screen
-bind .:alt,cmd throw 1 resize
-bind ,:alt,cmd throw 0 resize
+bind .:alt,cmd throw 1
+bind ,:alt,cmd throw 0
 
 # Application Layouts
 layout 2monitor-Work 'Mail':REPEAT ${1-lefthalf}
@@ -59,5 +57,9 @@ bind c:cmd,alt focus 'Google Chrome'
 bind m:cmd,alt focus 'Mail'
 bind o:cmd,alt focus 'OmniFocus'
 bind e:cmd,alt focus 'Evernote'
+
+# Show a positioning grid for each monitor
+bind g:cmd grid padding:5 0:6,2 1:8,3
+
 
 bind `:alt,cmd relaunch
