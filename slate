@@ -42,8 +42,8 @@ bind /:alt;cmd ${bottomright}
 
 
 # Throw to a different screen
-bind .:alt,cmd throw 1
-bind ,:alt,cmd throw 0
+bind .:alt,cmd throw right
+bind ,:alt,cmd throw left
 
 # Application Layouts
 layout 2monitor-Work 'Mail':REPEAT ${1-lefthalf}
