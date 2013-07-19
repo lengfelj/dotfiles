@@ -2,10 +2,14 @@
 * ALT - CMD - 2 __2 monitor setup for work__
 
 #Move window location
-* ALT - CMD - LEFT Arrow __Move to the left__
-* ALT - CMD - RIGHT Arrow __Move to the right__
-* ALT - CMD - UP Arrow __Move to the top__
-* ALT - CMD - DOWN Arrow  __Move to the bottom__
+* ALT - CMD - Y __Top Left__
+* ALT - CMD - P __Top Right__
+* ALT - CMD - B __Bottom Left__
+* ALT - CMD - /  __Bottom Right__
+* ALT - CMD - H  __Left Half__
+*  ALT - CMD - L  __Right Half__
+* ALT - CMD - K  __Top Half__
+* ALT - CMD - J __Bottom Half__
 
 * ALT - CMD - = __Full Screen__
 
@@ -21,3 +25,9 @@
 * ALT - CMD - M __Mail__
 *  ALT - CMD - O __Omnifocus__
 *  ALT - CMD - E __Evernote__
+
+##Grid
+* CMD-G 
+
+##Relaunch Slate
+* CMD-ALT-`
