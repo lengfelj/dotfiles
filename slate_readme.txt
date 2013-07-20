@@ -7,7 +7,7 @@
 * ALT - CMD - B __Bottom Left__
 * ALT - CMD - /  __Bottom Right__
 * ALT - CMD - H  __Left Half__
-*  ALT - CMD - L  __Right Half__
+* ALT - CMD - L  __Right Half__
 * ALT - CMD - K  __Top Half__
 * ALT - CMD - J __Bottom Half__
 
