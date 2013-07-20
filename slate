@@ -57,6 +57,7 @@ bind c:cmd,alt focus 'Google Chrome'
 bind m:cmd,alt focus 'Mail'
 bind o:cmd,alt focus 'OmniFocus'
 bind e:cmd,alt focus 'Evernote'
+bind t:cmd,alt focus 'Terminal'
 
 # Show a positioning grid for each monitor
 bind g:cmd grid padding:5 0:6,2 1:8,3
