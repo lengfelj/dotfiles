@@ -4,3 +4,7 @@ export LSCOLORS=BxFxBxDxCxegedabagacad
 alias ls='ls -GFh'
 export PATH=/usr/local/bin://usr/local/mysql-5.5.28-osx10.6-x86:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 eval "$(rbenv init -)"
+alias ll='ls -lahG'
+alias home='cd ~'
+alias up='cd ..'
+alias h='history'
