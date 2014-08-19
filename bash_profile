@@ -8,3 +8,8 @@ alias ll='ls -lahG'
 alias home='cd ~'
 alias up='cd ..'
 alias h='history'
+
+export HISTTIMEFORMAT='%b %d %I:%M %p '
+export HISTCONTROL=ignoreboth
+export HISTIGNORE="history:h:exit:ls:ls -la:ll"
+
